@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$:.unshift "#{File.dirname(__FILE__)}/lib"
+
+require 'toy_robot_interface'
+
+if ARGV.size > 0
+  ToyRobotInterface.new.read_file ARGV[0]
+else
+  ToyRobotInterface.new.read_commands
+end
+
